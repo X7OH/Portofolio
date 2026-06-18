@@ -6,7 +6,7 @@
     "phone": "+593 99 272 4223",
     "linkedin": "https://linkedin.com/in/david-allan-arias/",
     "github": "",
-    "picture": "images/dlan.png",
+    "picture": "/dlan.png",
     "summary": "Software Developer focused on backend engineering and enterprise process optimization. Specialized in implementing ERP systems (Openbravo, Odoo) and automation using N8N. Experienced in the full development lifecycle, PostgreSQL databases, and Docker container deployment, dedicated to designing robust and scalable solutions."
   },
   "experience": [
