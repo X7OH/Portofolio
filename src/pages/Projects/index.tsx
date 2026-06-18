@@ -6,54 +6,69 @@ export default function Projects() {
 
   return (
     <div className="flex-grow flex flex-col pt-12 pb-24 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out">
+      <div className="mb-12">
+        <h1 className="text-4xl font-bold tracking-tight text-zinc-100 mb-4">My projects</h1>
+        <p className="text-zinc-400 max-w-2xl leading-relaxed">
+          These are some of the projects I have created and worked on. Each project reflects a unique challenge and a valuable learning experience.
+        </p>
+      </div>
+
       {projects && projects.length > 0 ? (
-        <div className="space-y-24">
-          {projects.map((project, index) => (
-            <div key={index} className="space-y-8">
-              <div className="flex items-center justify-between">
-                <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-100">
-                  {project.name}
-                </h1>
-                {project.link && (
-                  <a 
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-zinc-800/80 hover:bg-zinc-700 text-zinc-200 text-sm font-medium rounded-md transition-colors border border-zinc-700/50"
-                  >
-                    Go to website
-                    <ExternalLink size={14} />
-                  </a>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project: any, index: number) => (
+            <div key={index} className="flex flex-col bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden hover:border-zinc-700 transition-colors">
+              <div className="w-full h-48 bg-zinc-950 relative border-b border-zinc-800 overflow-hidden">
+                {project.video ? (
+                  <video 
+                    src={project.video} 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                ) : project.image ? (
+                  <img 
+                    src={project.image} 
+                    alt={project.name} 
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-zinc-700">
+                    <Terminal size={40} />
+                  </div>
                 )}
               </div>
               
-              <div className="rounded-xl overflow-hidden border border-zinc-800 shadow-2xl">
-                <img 
-                  src={project.image} 
-                  alt={project.name} 
-                  className="w-full h-auto object-cover border-b border-zinc-800"
-                />
-              </div>
+              <div className="flex flex-col flex-grow p-6">
+                <h3 className="text-xl font-bold text-zinc-100 mb-2">{project.name}</h3>
+                
+                <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+                  {project.notes || (project.overview && project.overview[0])}
+                </p>
 
-              {project.notes && (
-                <div className="p-6 rounded-xl border border-zinc-800/80 bg-zinc-900/40">
-                  <h3 className="text-xl font-semibold text-zinc-100 mb-2">Notes</h3>
-                  <p className="text-zinc-400 leading-relaxed text-[15px]">
-                    {project.notes}
-                  </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.technologies && project.technologies.map((tech: string, i: number) => (
+                    <span key={i} className="px-2.5 py-1 bg-zinc-800/80 text-zinc-300 text-[11px] font-semibold tracking-wide uppercase rounded-md border border-zinc-700/50">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-              )}
 
-              {project.overview && project.overview.length > 0 && (
-                <div className="space-y-6 pt-4">
-                  <h2 className="text-2xl font-bold text-zinc-100">Overview</h2>
-                  <div className="space-y-4 text-zinc-400 leading-relaxed">
-                    {(project.overview as string[]).map((paragraph, i) => (
-                      <p key={i}>{paragraph}</p>
-                    ))}
+                {project.link && (
+                  <div className="mt-auto flex justify-end">
+                    <a 
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-medium rounded transition-colors border border-zinc-700/50"
+                    >
+                      View
+                      <ExternalLink size={12} />
+                    </a>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           ))}
         </div>

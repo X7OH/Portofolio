@@ -64,10 +64,21 @@
       "name": "Pet Store e-commerce",
       "image": "/pet_shop.png",
       "link": "https://tienda-mascotas-ex-analisis.vercel.app",
+      "technologies": ["Django", "Python", "SQLite"],
       "notes": "Local deployment configured with SQLite for testing purposes. Developed using Django and Python.",
       "overview": [
         "The Pet Store e-commerce project is an online platform designed to provide a seamless shopping experience for pet owners. It features an extensive catalog of pet products, user authentication, and shopping cart functionality.",
         "The platform includes administrative functions for managing the inventory, updating product details, and tracking customer interactions. Built with Django and Python, it ensures a reliable and scalable backend architecture tailored for retail operations."
+      ]
+    },
+    {
+      "name": "Lens technical data sheet",
+      "video": "/lens_demo.mp4",
+      "technologies": ["Java", "Swing", "PostgreSQL"],
+      "notes": "Desktop inventory management and technical data sheet system developed for an optician.",
+      "overview": [
+        "Led a 2-person team in developing this comprehensive desktop system. The application handles billing, stock control, and specific lens specifications.",
+        "It features comprehensive modules for the creation, update, and printing of technical sheets, ensuring the optician can easily track and fulfill client orders."
       ]
     }
   ]

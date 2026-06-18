@@ -30,7 +30,7 @@ export default function Home() {
         <div className="flex-1 space-y-8">
           <div className="space-y-4">
             <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-zinc-100">
-              Hi, I'm <span className="text-indigo-400">{name.split(' ')[0]}</span>.
+              Hi, I'm <span className="text-indigo-400">David</span>.
             </h1>
             <h2 className="text-2xl sm:text-3xl font-medium text-zinc-400">
               {title}
