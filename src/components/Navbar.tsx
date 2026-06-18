@@ -15,7 +15,7 @@ export default function Navbar() {
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <NavLink to="/" className="flex items-center gap-2 text-zinc-100 hover:text-indigo-400 transition-colors">
           <Terminal size={24} className="text-indigo-500" />
-          <span className="font-bold tracking-tight">Stitch Dev</span>
+          <span className="font-bold tracking-tight">David Allan</span>
         </NavLink>
         <nav className="flex items-center gap-6">
           {links.map((link) => (
