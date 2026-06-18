@@ -6,7 +6,7 @@
     "phone": "+593 99 272 4223",
     "linkedin": "https://linkedin.com/in/david-allan-arias/",
     "github": "",
-    "picture": "https://rxresu.me/api/uploads/019ed134-6340-77fa-b577-6f2980f2279c/pictures/1781627875832.jpeg",
+    "picture": "images/dlan.png",
     "summary": "Software Developer focused on backend engineering and enterprise process optimization. Specialized in implementing ERP systems (Openbravo, Odoo) and automation using N8N. Experienced in the full development lifecycle, PostgreSQL databases, and Docker container deployment, dedicated to designing robust and scalable solutions."
   },
   "experience": [
@@ -63,7 +63,7 @@
     {
       "name": "Pet Store e-commerce",
       "image": "/pet_shop.png",
-      "link": "https://github.com/X7OH/Tienda-Mascotas--ExAnalisis-",
+      "link": "https://tienda-mascotas-ex-analisis.vercel.app",
       "notes": "Local deployment configured with SQLite for testing purposes. Developed using Django and Python.",
       "overview": [
         "The Pet Store e-commerce project is an online platform designed to provide a seamless shopping experience for pet owners. It features an extensive catalog of pet products, user authentication, and shopping cart functionality.",
