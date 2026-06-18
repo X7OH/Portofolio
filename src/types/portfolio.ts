@@ -28,5 +28,5 @@ export interface PortfolioData {
   experience: Experience[];
   education: Education[];
   skills: string[];
-  projects: any[];
+  projects: unknown[];
 }
