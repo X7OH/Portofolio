@@ -82,6 +82,19 @@
         "Led a 2-person team in developing this comprehensive desktop system. The application handles billing, stock control, and specific lens specifications.",
         "It features comprehensive modules for the creation, update, and printing of technical sheets, ensuring the optician can easily track and fulfill client orders."
       ]
+    },
+    {
+      "id": "lens-glass-inventory",
+      "name": "Lens glass inventory",
+      "image": "/lens_inventory.png",
+      "link": "https://youtu.be/8EavYjgi6vw?si=uK1QrAIiViSQQXM7",
+      "technologies": ["Java", "Swing", "PostgreSQL", "Excel"],
+      "notes": "Inventory management system for lens glasses with detailed tracking and Excel export.",
+      "overview": [
+        "This Java program is an inventory management system for lens glasses, allowing users to input, modify, and track products with detailed specifications such as name, manufacturer, addition, index, base curve, material, type of lens, and quantity. The program includes extensive validation to ensure data integrity, and it updates the user interface to reflect the current state of the inventory.",
+        "The system features tables that display all products in the inventory, providing a clear overview of each product's stock levels and specifications. Users can easily update product information, ensuring the database remains accurate and up-to-date. The program supports both adding new products and updating existing ones, with confirmation prompts to prevent accidental changes.",
+        "Additionally, the program maintains a detailed log of stock movements, recording each transaction's timestamp and specifics. This allows for comprehensive tracking of inventory changes over time, aiding in stock management and planning. It also includes a way to download the information in excel format."
+      ]
     }
   ]
 }
