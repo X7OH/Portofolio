@@ -46,7 +46,7 @@ export default function ProjectDetails() {
         </div>
         
         <div className="rounded-xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-950">
-          {project.video ? (
+          {project.video && !project.video.includes('youtube.com') && !project.video.includes('youtu.be') ? (
             <video 
               src={project.video} 
               autoPlay 
@@ -55,6 +55,16 @@ export default function ProjectDetails() {
               playsInline
               className="w-full h-auto max-h-[600px] object-contain border-b border-zinc-800"
             />
+          ) : project.video && (project.video.includes('youtube.com') || project.video.includes('youtu.be')) ? (
+            <div className="relative w-full aspect-video border-b border-zinc-800">
+              <iframe 
+                src={project.video} 
+                title={project.name}
+                className="absolute top-0 left-0 w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           ) : project.image ? (
             <img 
               src={project.image} 

@@ -30,7 +30,7 @@ export default function Projects() {
           {projects.map((project: Project, index: number) => (
             <div key={index} className="flex flex-col bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden hover:border-zinc-700 transition-colors">
               <div className="w-full h-48 bg-zinc-950 relative border-b border-zinc-800 overflow-hidden">
-                {project.video ? (
+                {project.video && !project.video.includes('youtube.com') && !project.video.includes('youtu.be') ? (
                   <video 
                     src={project.video} 
                     autoPlay 
@@ -44,6 +44,13 @@ export default function Projects() {
                     src={project.image} 
                     alt={project.name} 
                     className="w-full h-full object-cover"
+                  />
+                ) : project.video && (project.video.includes('youtube.com') || project.video.includes('youtu.be')) ? (
+                  <iframe 
+                    src={project.video}
+                    title={project.name}
+                    className="w-full h-full border-0 pointer-events-none"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-zinc-700">
