@@ -87,6 +87,7 @@
     {
       "id": "lens-glass-inventory",
       "name": "Lens glass inventory",
+      "image": "/inventario.png",
       "video": "/lens_inventory_demo.mp4",
       "technologies": ["Java", "Swing", "PostgreSQL", "Excel"],
       "notes": "Inventory management system for lens glasses with detailed tracking and Excel export.",
