@@ -75,6 +75,7 @@
     {
       "id": "lens-data-sheet",
       "name": "Lens technical data sheet",
+      "image": "/ficha_tecnica.png",
       "video": "/lens_demo.mp4",
       "technologies": ["Java", "Swing", "PostgreSQL"],
       "notes": "Desktop inventory management and technical data sheet system developed for an optician.",

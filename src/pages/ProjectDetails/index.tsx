@@ -45,34 +45,38 @@ export default function ProjectDetails() {
           )}
         </div>
         
-        <div className="rounded-xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-950">
-          {project.video && !project.video.includes('youtube.com') && !project.video.includes('youtu.be') ? (
-            <video 
-              src={project.video} 
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              className="w-full h-auto max-h-[600px] object-contain border-b border-zinc-800"
-            />
-          ) : project.video && (project.video.includes('youtube.com') || project.video.includes('youtu.be')) ? (
-            <div className="relative w-full aspect-video border-b border-zinc-800">
-              <iframe 
-                src={project.video} 
-                title={project.name}
-                className="absolute top-0 left-0 w-full h-full border-0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          ) : project.image ? (
+        {project.image ? (
+          <div className="rounded-xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-950">
             <img 
               src={project.image} 
               alt={project.name} 
               className="w-full h-auto max-h-[600px] object-cover border-b border-zinc-800"
             />
-          ) : null}
-        </div>
+          </div>
+        ) : project.video ? (
+          <div className="rounded-xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-950">
+            {!project.video.includes('youtube.com') && !project.video.includes('youtu.be') ? (
+              <video 
+                src={project.video} 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-auto max-h-[600px] object-contain border-b border-zinc-800"
+              />
+            ) : (
+              <div className="relative w-full aspect-video border-b border-zinc-800">
+                <iframe 
+                  src={project.video} 
+                  title={project.name}
+                  className="absolute top-0 left-0 w-full h-full border-0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            )}
+          </div>
+        ) : null}
 
         {project.technologies && project.technologies.length > 0 && (
           <div className="flex flex-wrap gap-2 pt-2">
@@ -100,6 +104,34 @@ export default function ProjectDetails() {
               {(project.overview as string[]).map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
+            </div>
+          </div>
+        )}
+
+        {project.image && project.video && (
+          <div className="pt-8 animate-in fade-in slide-in-from-bottom-4 duration-700 ease-in-out delay-150">
+            <h2 className="text-2xl font-bold text-zinc-100 mb-6">Demo Video</h2>
+            <div className="rounded-xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-950">
+              {!project.video.includes('youtube.com') && !project.video.includes('youtu.be') ? (
+                <video 
+                  src={project.video} 
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                  className="w-full h-auto max-h-[600px] object-contain border-b border-zinc-800"
+                />
+              ) : (
+                <div className="relative w-full aspect-video border-b border-zinc-800">
+                  <iframe 
+                    src={project.video} 
+                    title={project.name}
+                    className="absolute top-0 left-0 w-full h-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              )}
             </div>
           </div>
         )}
