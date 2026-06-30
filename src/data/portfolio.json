@@ -96,6 +96,18 @@
         "The application includes intuitive data tables that provide a complete snapshot of the available inventory and product specifications. This makes it straightforward for staff to keep records current. The software accommodates both the creation of new entries and the modification of existing ones, featuring safety prompts to avoid unintended edits.",
         "Furthermore, the software automatically logs all inventory movements, capturing exact timestamps and transaction details. This functionality facilitates long-term stock tracking and simplifies inventory planning. It also provides a practical feature to export all data directly into Excel spreadsheets."
       ]
+    },
+    {
+      "id": "constrained-clustering-benchmark",
+      "name": "Constrained Clustering Benchmark",
+      "image": "/tesis_resume.png",
+      "technologies": ["R", "Machine Learning", "Data Mining", "Algorithms"],
+      "notes": "Comparative evaluation framework for semi-supervised clustering algorithms with size constraints.",
+      "overview": [
+        "This research project presents a comprehensive benchmarking framework to evaluate the performance of eight semi-supervised clustering algorithms with size constraints. Built using the R programming language and following a modified CRISP-DM methodology, the system processes over 100 datasets from OpenML to compare different clustering approaches, including Linear Programming, Metaheuristics, and Hierarchical techniques.",
+        "The system features a highly modular architecture that automatically downloads, filters, and preprocesses data. It then executes the clustering models in parallel or sequentially, ensuring strict adherence to predefined cardinality constraints. Finally, it evaluates each algorithm's performance using both internal metrics like the Silhouette coefficient and external metrics such as ARI, AMI, and NMI.",
+        "The extensive experimental results revealed that algorithms like HCAKC and K-MeansBA excel at approximating the ground truth, while Linear Programming approaches (like MILP-KM) produce highly cohesive and well-separated clusters. This robust testing environment provides valuable insights into the computational complexity, execution time, and overall efficiency of constrained clustering solutions."
+      ]
     }
   ]
 }
